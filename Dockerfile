@@ -6,6 +6,7 @@ FROM nginx:alpine
 
 # Copy your index.html to the default html directory
 COPY index.html /usr/share/nginx/html/index.html
+COPY images/ /usr/share/nginx/html/images/
 
 # Expose the default Nginx port
 EXPOSE 80

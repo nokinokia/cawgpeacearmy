@@ -8,4 +8,6 @@ docker build -t $CONTAINER_NAME .
 echo "🚀 Starting development server at http://localhost:8080"
 docker run --rm -p 8080:80 \
   -v $(pwd)/index.html:/usr/share/nginx/html/index.html \
-  $CONTAINER_NAME
+  -v $(pwd)/images:/usr/share/nginx/html/images \
+  dev-sol
+
